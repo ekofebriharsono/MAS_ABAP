@@ -1,0 +1,11 @@
+`*------------------------
+* TOP Include
+*------------------------
+type-pools : slis.
+
+data : gt_field type slis_t_fieldcat_alv,
+       wa_field type slis_fieldcat_alv,
+       wa_layout type slis_layout_alv.
+*------------------------
+* TOP Include
+*------------------------`

@@ -1,0 +1,7 @@
+*Note Layout :*
+*zebra* - line color like zebra
+*colwidth_optimize* - Optimize width colomn
+*box_fieldname* - Selection row
+*lights_fieldname* - Indicator
+*coltab_fieldname* - Cell Color
+*info_fieldname* - Line Color

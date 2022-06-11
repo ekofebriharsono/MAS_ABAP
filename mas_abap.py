@@ -37,24 +37,33 @@ def contactUs(message):
 @bot.message_handler(commands=['alvcreate'])
 def contactUs(message):
     markup = telebot.types.InlineKeyboardMarkup()
-    button1 = telebot.types.InlineKeyboardButton("Fieldcat", callback_data="fieldcat")
-    button2 = telebot.types.InlineKeyboardButton("Layout", callback_data="layout")
-    markup.add(button1, button2)
+    btnTOP = telebot.types.InlineKeyboardButton("TOP Include", callback_data="top_include_alv")
+    markup.add(btnTOP)
+    btnFieldcat = telebot.types.InlineKeyboardButton("Fieldcat", callback_data="fieldcat")
+    btnLayout = telebot.types.InlineKeyboardButton("Layout", callback_data="layout")
+    markup.add(btnFieldcat, btnLayout)
     msg = bot.send_message(message.chat.id, "Create ALV", reply_to_message_id=message.message_id, reply_markup=markup, parse_mode=modeMarkdown)
     bot.register_callback_query_handler(msg, call_handler_create_alv)
 
 @bot.callback_query_handler(func=lambda call:True)
 def call_handler_create_alv(call):
-    if call.data == "fieldcat":
+    if call.data == "top_include_alv":
+        build_top_alv(call)
+    elif call.data == "fieldcat":
         build_fieldcat(call)
     elif call.data == "layout":
         build_layout(call)
 
 def build_fieldcat(call):
-    bot.send_message(call.message.chat.id, "Build Fieldcat", parse_mode=modeMarkdown)
+    bot.send_message(call.message.chat.id, t.textCreateALVNote, parse_mode=modeMarkdown)
+    bot.send_message(call.message.chat.id, t.textCreateALV, parse_mode=modeMarkdown)
 
 def build_layout(call):
-    bot.send_message(call.message.chat.id, "Build Layout", parse_mode=modeMarkdown)
+    bot.send_message(call.message.chat.id, t.textCreateLayoutNote, parse_mode=modeMarkdown)
+    bot.send_message(call.message.chat.id, t.textCreateLayout, parse_mode=modeMarkdown)
+
+def build_top_alv(call):
+    bot.send_message(call.message.chat.id, t.textCreateTOPALV, parse_mode=modeMarkdown)
 
 while True:
     try:

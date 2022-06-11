@@ -1,0 +1,10 @@
+`form build_layout.
+  clear wa_layout.
+
+  wa_layout-zebra = 'X'.
+  wa_layout-colwidth_optimize = 'X'.
+*  wa_layout-box_fieldname = 'SEL'.
+*  wa_layout-lights_fieldname = 'LIGHT_TRAFFIC'.
+*  wa_layout-coltab_fieldname = 'CELLCOLOR'.
+*  wa_layout-info_fieldname = 'LINE_COLOR'.
+endform.`

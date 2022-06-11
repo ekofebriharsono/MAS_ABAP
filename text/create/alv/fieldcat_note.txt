@@ -1,0 +1,4 @@
+*Note Fieldcat :*
+*fieldname* - Column name
+*key* - Primary key
+*just* - Center Content

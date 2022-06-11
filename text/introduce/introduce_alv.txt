@@ -1,0 +1,1 @@
+*ALV* stands for *ABAP* List Viewer. ALV gives us a standard List format and user interface to all our ABAP reports. ALV is created by a set of standard function modules provided by SAP.

@@ -1,3 +1,4 @@
+
 welcome = "Hello welcome to Mas ABAP\n\n"
 control = "You can control me by sending these commands:\n\n"
 
@@ -19,6 +20,63 @@ h1 = "/contactus"
 
 start = welcome + control + introduce + i1 + i2 + i3 + create + c1 + contact + h1
 
-whatIsABAP = "*ABAP* (Advanced Business Application Programming), is a fourth-generation programming language, used for development and customization purposes in the SAP software. Currently positioned along with Java, as the main language for SAP application server programming, most of the programs are executed under the control of the run-time system. This tutorial explains the key concepts of SAP ABAP."
-whatIsALV = "*ALV* stands for *ABAP* List Viewer. ALV gives us a standard List format and user interface to all our ABAP reports. ALV is created by a set of standard function modules provided by SAP."
-whatIsBAPI = "*BAPI* (Business Application Programming Interface) is a standard interface to the business object models in SAP products. BAPIs are the primary method through which customer code and third-party applications interact with SAP products."
+# Text Intrpduce
+getTextABAP = open("text/introduce/introduce_abap.txt", "r")
+whatIsABAP = ""
+for text in getTextABAP:
+    whatIsABAP = whatIsABAP + text
+
+getTextAlv = open("text/introduce/introduce_alv.txt", "r")
+whatIsALV = ""
+for text in getTextAlv:
+    whatIsALV = whatIsALV + text
+
+getTextBAPI = open("text/introduce/introduce_bapi.txt", "r")
+whatIsBAPI = ""
+for text in getTextBAPI:
+    whatIsBAPI = whatIsBAPI + text
+
+
+# Text Create ALV
+# =====================================================================
+# Fieldcat
+# =====================================================================
+getTextCreateALV = open("text/create/alv/fieldcat.txt","r")
+textCreateALV = ""
+for text in getTextCreateALV:
+    textCreateALV = textCreateALV + text
+
+getTextCreateALVNote = open("text/create/alv/fieldcat_note.txt","r")
+textCreateALVNote = ""
+for text in getTextCreateALVNote:
+    textCreateALVNote = textCreateALVNote + text
+# =====================================================================
+# Fieldcat
+# =====================================================================
+
+# =====================================================================
+# Layout
+# =====================================================================
+getTextCreateLayout = open("text/create/alv/layout.txt","r")
+textCreateLayout = ""
+for text in getTextCreateLayout:
+    textCreateLayout = textCreateLayout + text
+
+getTextCreateLayoutNote = open("text/create/alv/layout_note.txt","r")
+textCreateLayoutNote = ""
+for text in getTextCreateLayoutNote:
+    textCreateLayoutNote = textCreateLayoutNote + text
+# =====================================================================
+# Layout
+# =====================================================================
+
+# =====================================================================
+# TOP
+# =====================================================================
+getTextCreateTOPALV = open("text/create/alv/top_include_alv.txt","r")
+textCreateTOPALV = ""
+for text in getTextCreateTOPALV:
+    textCreateTOPALV = textCreateTOPALV + text
+# =====================================================================
+# TOP
+# =====================================================================

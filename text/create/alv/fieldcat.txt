@@ -1,0 +1,13 @@
+`form build_fieldcat.
+  clear gt_field[].
+
+  wa_field-fieldname  = 'EBELN'.
+  wa_field-seltext_m  = 'Purchasing Doc.'.
+  wa_field-key  = 'X'.
+*  wa_field-just = 'C'.
+  append wa_field to gt_field.
+  clear wa_field.
+  
+  append wa_field to gt_field.
+  clear wa_field.
+endform.`

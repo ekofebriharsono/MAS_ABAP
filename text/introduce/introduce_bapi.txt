@@ -1,0 +1,1 @@
+*BAPI* (Business Application Programming Interface) is a standard interface to the business object models in SAP products. BAPIs are the primary method through which customer code and third-party applications interact with SAP products.
