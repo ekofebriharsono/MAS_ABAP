@@ -1,0 +1,5 @@
+`FORM get_data.
+  CLEAR gt_mara[].
+  SELECT * FROM mara INTO TABLE gt_mara
+    UP TO 10 ROWS.
+ENDFORM.`

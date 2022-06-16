@@ -12,13 +12,15 @@ i3 = "/bapi - Functional Module\n\n"
 
 # Command Create
 create = "*Create :* \n"
-c1 = "/alvcreate - Create ALV Report\n\n"
+c1 = "/alvcreate - Create ALV Report\n"
+# Command Macros
+c2 = "/macroscreate - Dinamis Calculate\n\n"
 
 # Command contact
 contact = "*Contact : *\n"
 h1 = "/contactus"
 
-start = welcome + control + introduce + i1 + i2 + i3 + create + c1 + contact + h1
+start = welcome + control + introduce + i1 + i2 + i3 + create + c1 + c2 + contact + h1
 
 # Text Intrpduce
 getTextABAP = open("text/introduce/introduce_abap.txt", "r")
@@ -79,4 +81,37 @@ for text in getTextCreateTOPALV:
     textCreateTOPALV = textCreateTOPALV + text
 # =====================================================================
 # TOP
+# =====================================================================
+
+# =====================================================================
+# GET DATA
+# =====================================================================
+getTextCreateGetData = open("text/create/global/get_data.txt","r")
+textCreateGetData = ""
+for text in getTextCreateGetData:
+    textCreateGetData = textCreateGetData + text
+# =====================================================================
+# GET DATA
+# =====================================================================
+
+# Text Create MACROS
+# =====================================================================
+# Macros 1
+# =====================================================================
+getTextCreateMacros1 = open("text/create/macros/macros_1.txt","r")
+textCreateMacros1 = ""
+for text in getTextCreateMacros1:
+    textCreateMacros1 = textCreateMacros1 + text
+# =====================================================================
+# Macros 1
+# =====================================================================
+# =====================================================================
+# Macros 2
+# =====================================================================
+getTextCreateMacros2 = open("text/create/macros/macros_2.txt","r")
+textCreateMacros2 = ""
+for text in getTextCreateMacros2:
+    textCreateMacros2 = textCreateMacros2 + text
+# =====================================================================
+# Macros 2
 # =====================================================================

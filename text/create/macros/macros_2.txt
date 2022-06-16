@@ -1,0 +1,18 @@
+`DATA : hasil TYPE i.
+
+DATA : a TYPE i,
+       b TYPE i.
+
+DEFINE count.
+&1 = &2 + &3.
+END-OF-DEFINITION.
+
+START-OF-SELECTION.
+
+a = 10.
+b = 20.
+count hasil a b.
+
+WRITE hasil.
+
+END-OF-SELECTION.`

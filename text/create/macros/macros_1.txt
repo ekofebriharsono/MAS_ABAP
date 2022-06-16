@@ -1,0 +1,9 @@
+`DEFINE mac_test.
+WRITE: 'This is Macro &1'.
+END-OF-DEFINITION.
+
+start-of-selection.
+
+mac_test 1.
+
+end-of-selection.`
